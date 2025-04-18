@@ -12,12 +12,18 @@
 
 <body>
     <div class="container">
-        <h1>Laravel Authentication</h1>
-
-        <a href="{{ route('register') }}" class="btn btn-primary mt-5">Register</a>
-        <a href="{{ route('login') }}" class="btn btn-primary mt-5">Login</a>
+        <div class="row">
+            <div class="col-6 mb-3">
+                <h1>Welcome, {{ Auth::user()->name }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <a href="{{ route('inner') }}" class="btn btn-primary ">Go To Inner Page</a>
+                <a href="{{ route('logout') }}" class="btn btn-danger ">Logout</a>
+            </div>
+        </div>
     </div>
-
 </body>
 
 </html>
